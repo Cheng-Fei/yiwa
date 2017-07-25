@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "MJRefresh.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
 @interface ViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -50,6 +51,46 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.webView.scrollView.mj_header endRefreshing];
+    
+//    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+//    
+//    context[@"onPay"] = ^(){
+//        
+//        NSArray *array = [JSContext currentArguments];
+//        
+//    };
+    
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    // NOTE: ------  对alipays:相关的scheme处理 -------
+    // NOTE: 若遇到支付宝相关scheme，则跳转到本地支付宝App
+    NSString* reqUrl = request.URL.absoluteString;
+    if ([reqUrl hasPrefix:@"alipays://"] || [reqUrl hasPrefix:@"alipay://"]) {
+        // NOTE: 跳转支付宝App
+        BOOL bSucc = [[UIApplication sharedApplication]openURL:request.URL];
+        
+        // NOTE: 如果跳转失败，则跳转itune下载支付宝App
+        if (!bSucc) {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                           message:@"未检测到支付宝客户端，请安装后重试。"
+                                                          delegate:self
+                                                 cancelButtonTitle:@"立即安装"
+                                                 otherButtonTitles:nil];
+            [alert show];
+        }
+        return NO;
+    }
+    return YES;
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    // NOTE: 跳转itune下载支付宝App
+    NSString* urlStr = @"https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8";
+    NSURL *downloadUrl = [NSURL URLWithString:urlStr];
+    [[UIApplication sharedApplication]openURL:downloadUrl];
 }
 
 
