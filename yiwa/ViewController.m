@@ -10,6 +10,9 @@
 #import "MJRefresh.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
+static NSString * const isNeedNav = @"isNeedNav";
+
+
 @interface ViewController () <UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
@@ -25,7 +28,23 @@
     self.webView.scrollView.showsVerticalScrollIndicator = NO;
     self.webView.scrollView.showsHorizontalScrollIndicator = NO;
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc"]];
+    
+    // http://edu.evabot.cc/eva/index.jsp
+    
+    NSURLRequest *request;
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:isNeedNav]) {
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:isNeedNav];
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc"]];
+        
+    } else {
+        
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc/eva/index.jsp"]];
+
+    }
+    
+    
     
     [self.webView loadRequest:request];
     
@@ -40,6 +59,7 @@
         
         
     }];
+    
     
 }
 
@@ -72,26 +92,26 @@
         BOOL bSucc = [[UIApplication sharedApplication]openURL:request.URL];
         
         // NOTE: 如果跳转失败，则跳转itune下载支付宝App
-        if (!bSucc) {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
-                                                           message:@"未检测到支付宝客户端，请安装后重试。"
-                                                          delegate:self
-                                                 cancelButtonTitle:@"立即安装"
-                                                 otherButtonTitles:nil];
-            [alert show];
-        }
+//        if (!bSucc) {
+//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
+//                                                           message:@"未检测到支付宝客户端，请安装后重试。"
+//                                                          delegate:self
+//                                                 cancelButtonTitle:@"立即安装"
+//                                                 otherButtonTitles:nil];
+//            [alert show];
+//        }
         return NO;
     }
     return YES;
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    // NOTE: 跳转itune下载支付宝App
-    NSString* urlStr = @"https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8";
-    NSURL *downloadUrl = [NSURL URLWithString:urlStr];
-    [[UIApplication sharedApplication]openURL:downloadUrl];
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    // NOTE: 跳转itune下载支付宝App
+//    NSString* urlStr = @"https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8";
+//    NSURL *downloadUrl = [NSURL URLWithString:urlStr];
+//    [[UIApplication sharedApplication]openURL:downloadUrl];
+//}
 
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
