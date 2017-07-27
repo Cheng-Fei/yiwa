@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A28B2DA01F29E82A00FBEE07 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A28B2D9F1F29E82A00FBEE07 /* launch.png */; };
 		A297549B1F23267F0081ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549A1F23267F0081ACE9 /* main.m */; };
 		A297549E1F23267F0081ACE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549D1F23267F0081ACE9 /* AppDelegate.m */; };
 		A29754A11F23267F0081ACE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29754A01F23267F0081ACE9 /* ViewController.m */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A28B2D9F1F29E82A00FBEE07 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		A29754961F23267F0081ACE9 /* yiwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yiwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A297549A1F23267F0081ACE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A297549C1F23267F0081ACE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		A29754991F23267F0081ACE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A28B2D9F1F29E82A00FBEE07 /* launch.png */,
 				A297549A1F23267F0081ACE9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -408,6 +411,7 @@
 				A29754A91F23267F0081ACE9 /* LaunchScreen.storyboard in Resources */,
 				A29755091F2368AE0081ACE9 /* MJRefresh.bundle in Resources */,
 				A29755101F2626B20081ACE9 /* Assets.xcassets in Resources */,
+				A28B2DA01F29E82A00FBEE07 /* launch.png in Resources */,
 				A29754A41F23267F0081ACE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,7 +613,7 @@
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CF.yiwa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -622,7 +626,7 @@
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CF.yiwa;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -31,6 +31,19 @@ static NSString * const isNeedNav = @"isNeedNav";
     
     // http://edu.evabot.cc/eva/index.jsp
     
+    [self loadRequest];
+    
+    self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+        [self loadRequest];
+
+    }];
+    
+    
+}
+
+- (void)loadRequest{
+    
     NSURLRequest *request;
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:isNeedNav]) {
@@ -41,26 +54,12 @@ static NSString * const isNeedNav = @"isNeedNav";
     } else {
         
         request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc/eva/index.jsp"]];
-
+        
     }
     
     
     
     [self.webView loadRequest:request];
-    
-    self.webView.scrollView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-        if ([self.webView.request.URL.absoluteString isEqualToString:@"about:blank"]) {
-            [self.webView loadRequest:request];
-        }else {
-            
-            [self.webView loadRequest:self.webView.request];
-        }
-        
-        
-    }];
-    
-    
 }
 
 - (BOOL)prefersStatusBarHidden
