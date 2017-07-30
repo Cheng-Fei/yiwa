@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "WXApi.h"
+#import "WXApiManager.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +19,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //注册微信
+    [WXApi registerApp:@"wxbb485199f084f2c5"];
+    
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 
@@ -46,6 +60,8 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 
 @end

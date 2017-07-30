@@ -36,6 +36,16 @@
 		A297550D1F2368AE0081ACE9 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = A29754F81F2368AE0081ACE9 /* UIScrollView+MJRefresh.m */; };
 		A297550E1F2368AE0081ACE9 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A29754FA1F2368AE0081ACE9 /* UIView+MJExtension.m */; };
 		A29755101F2626B20081ACE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A297550F1F2626B20081ACE9 /* Assets.xcassets */; };
+		A29755171F2D70A10081ACE9 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755121F2D70A10081ACE9 /* libWeChatSDK.a */; };
+		A29755181F2D70A10081ACE9 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = A29755131F2D70A10081ACE9 /* README.txt */; };
+		A297551B1F2D75E90081ACE9 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A297551A1F2D75E90081ACE9 /* WXApiManager.m */; };
+		A297551E1F2D77520081ACE9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297551D1F2D77520081ACE9 /* SystemConfiguration.framework */; };
+		A29755201F2D775F0081ACE9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A297551F1F2D775F0081ACE9 /* CoreTelephony.framework */; };
+		A29755221F2D77740081ACE9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755211F2D77740081ACE9 /* libz.tbd */; };
+		A29755241F2D778C0081ACE9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755231F2D778C0081ACE9 /* libsqlite3.0.tbd */; };
+		A29755261F2D779C0081ACE9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755251F2D779C0081ACE9 /* libc++.tbd */; };
+		A297552B1F2D78330081ACE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755271F2D77AD0081ACE9 /* Security.framework */; };
+		A297552C1F2D783D0081ACE9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29755291F2D77BA0081ACE9 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +123,21 @@
 		A29754F91F2368AE0081ACE9 /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		A29754FA1F2368AE0081ACE9 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		A297550F1F2626B20081ACE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A29755121F2D70A10081ACE9 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		A29755131F2D70A10081ACE9 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		A29755141F2D70A10081ACE9 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		A29755151F2D70A10081ACE9 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		A29755161F2D70A10081ACE9 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		A29755191F2D75E90081ACE9 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		A297551A1F2D75E90081ACE9 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		A297551D1F2D77520081ACE9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A297551F1F2D775F0081ACE9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A29755211F2D77740081ACE9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A29755231F2D778C0081ACE9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A29755251F2D779C0081ACE9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A29755271F2D77AD0081ACE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A29755291F2D77BA0081ACE9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A297552D1F2D78480081ACE9 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +145,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A297552C1F2D783D0081ACE9 /* CFNetwork.framework in Frameworks */,
+				A297552B1F2D78330081ACE9 /* Security.framework in Frameworks */,
+				A29755261F2D779C0081ACE9 /* libc++.tbd in Frameworks */,
+				A29755241F2D778C0081ACE9 /* libsqlite3.0.tbd in Frameworks */,
+				A29755221F2D77740081ACE9 /* libz.tbd in Frameworks */,
+				A29755201F2D775F0081ACE9 /* CoreTelephony.framework in Frameworks */,
+				A297551E1F2D77520081ACE9 /* SystemConfiguration.framework in Frameworks */,
+				A29755171F2D70A10081ACE9 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +180,7 @@
 				A29754B21F23267F0081ACE9 /* yiwaTests */,
 				A29754BD1F23267F0081ACE9 /* yiwaUITests */,
 				A29754971F23267F0081ACE9 /* Products */,
+				A297551C1F2D77510081ACE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,11 +197,14 @@
 		A29754981F23267F0081ACE9 /* yiwa */ = {
 			isa = PBXGroup;
 			children = (
+				A29755111F2D70A10081ACE9 /* OpenSDK1.7.9 */,
 				A29754CC1F2368AE0081ACE9 /* MJRefresh */,
 				A297549C1F23267F0081ACE9 /* AppDelegate.h */,
 				A297549D1F23267F0081ACE9 /* AppDelegate.m */,
 				A297549F1F23267F0081ACE9 /* ViewController.h */,
 				A29754A01F23267F0081ACE9 /* ViewController.m */,
+				A29755191F2D75E90081ACE9 /* WXApiManager.h */,
+				A297551A1F2D75E90081ACE9 /* WXApiManager.m */,
 				A29754A21F23267F0081ACE9 /* Main.storyboard */,
 				A297550F1F2626B20081ACE9 /* Assets.xcassets */,
 				A29754A71F23267F0081ACE9 /* LaunchScreen.storyboard */,
@@ -299,6 +336,33 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		A29755111F2D70A10081ACE9 /* OpenSDK1.7.9 */ = {
+			isa = PBXGroup;
+			children = (
+				A29755121F2D70A10081ACE9 /* libWeChatSDK.a */,
+				A29755131F2D70A10081ACE9 /* README.txt */,
+				A29755141F2D70A10081ACE9 /* WechatAuthSDK.h */,
+				A29755151F2D70A10081ACE9 /* WXApi.h */,
+				A29755161F2D70A10081ACE9 /* WXApiObject.h */,
+			);
+			path = OpenSDK1.7.9;
+			sourceTree = "<group>";
+		};
+		A297551C1F2D77510081ACE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A297552D1F2D78480081ACE9 /* libc++abi.tbd */,
+				A29755291F2D77BA0081ACE9 /* CFNetwork.framework */,
+				A29755271F2D77AD0081ACE9 /* Security.framework */,
+				A29755251F2D779C0081ACE9 /* libc++.tbd */,
+				A29755231F2D778C0081ACE9 /* libsqlite3.0.tbd */,
+				A29755211F2D77740081ACE9 /* libz.tbd */,
+				A297551F1F2D775F0081ACE9 /* CoreTelephony.framework */,
+				A297551D1F2D77520081ACE9 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -412,6 +476,7 @@
 				A29755091F2368AE0081ACE9 /* MJRefresh.bundle in Resources */,
 				A29755101F2626B20081ACE9 /* Assets.xcassets in Resources */,
 				A28B2DA01F29E82A00FBEE07 /* launch.png in Resources */,
+				A29755181F2D70A10081ACE9 /* README.txt in Resources */,
 				A29754A41F23267F0081ACE9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +512,7 @@
 				A29754FD1F2368AE0081ACE9 /* MJRefreshComponent.m in Sources */,
 				A29754FF1F2368AE0081ACE9 /* MJRefreshHeader.m in Sources */,
 				A297550E1F2368AE0081ACE9 /* UIView+MJExtension.m in Sources */,
+				A297551B1F2D75E90081ACE9 /* WXApiManager.m in Sources */,
 				A29755051F2368AE0081ACE9 /* MJRefreshBackStateFooter.m in Sources */,
 				A29754FB1F2368AE0081ACE9 /* MJRefreshAutoFooter.m in Sources */,
 				A297550D1F2368AE0081ACE9 /* UIScrollView+MJRefresh.m in Sources */,
@@ -609,12 +675,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6ZE5FH32SY;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yiwa/OpenSDK1.7.9",
+				);
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -622,12 +699,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6ZE5FH32SY;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/yiwa/OpenSDK1.7.9",
+				);
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
