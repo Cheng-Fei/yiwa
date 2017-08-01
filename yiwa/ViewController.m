@@ -119,21 +119,27 @@ static NSString * const isNeedNav = @"isNeedNav";
     
     if (error.code == -1009) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:@"网络错误，请检查网络设置" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            
-            [self.webView.scrollView.mj_header endRefreshing];
-            
-        }];
-        [alert addAction:action];
-        [self presentViewController:alert animated:YES completion:nil];
+        [self errorAlertWithMessage:@"网络错误，请检查网络设置"];
         
+    }else if (error.code == -1004) {
+        
+        [self errorAlertWithMessage:@"不能连接到服务器，请稍后重试"];
         
     }
     
 }
 
-
+- (void)errorAlertWithMessage:(NSString *)message
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        [self.webView.scrollView.mj_header endRefreshing];
+        
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 /*
  

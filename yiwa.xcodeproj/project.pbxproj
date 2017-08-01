@@ -431,7 +431,7 @@
 					A29754951F23267F0081ACE9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6ZE5FH32SY;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					A29754AE1F23267F0081ACE9 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -688,10 +688,10 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "104c0447-7277-447a-970c-c45a73441447";
+				PROVISIONING_PROFILE_SPECIFIER = "eva-dev";
 			};
 			name = Debug;
 		};
@@ -699,7 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 6ZE5FH32SY;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -712,10 +712,10 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "11e19d0a-06e2-4e8e-99f6-feb132adb695";
+				PROVISIONING_PROFILE_SPECIFIER = "eva-dis";
 			};
 			name = Release;
 		};
