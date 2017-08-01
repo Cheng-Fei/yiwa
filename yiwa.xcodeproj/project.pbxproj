@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A28B2DA01F29E82A00FBEE07 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A28B2D9F1F29E82A00FBEE07 /* launch.png */; };
+		A249260C1F30713C0050FA51 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A249260B1F30713C0050FA51 /* launch.png */; };
 		A297549B1F23267F0081ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549A1F23267F0081ACE9 /* main.m */; };
 		A297549E1F23267F0081ACE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549D1F23267F0081ACE9 /* AppDelegate.m */; };
 		A29754A11F23267F0081ACE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29754A01F23267F0081ACE9 /* ViewController.m */; };
@@ -66,7 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A28B2D9F1F29E82A00FBEE07 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		A249260B1F30713C0050FA51 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		A29754961F23267F0081ACE9 /* yiwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yiwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A297549A1F23267F0081ACE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A297549C1F23267F0081ACE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		A29754991F23267F0081ACE9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A28B2D9F1F29E82A00FBEE07 /* launch.png */,
+				A249260B1F30713C0050FA51 /* launch.png */,
 				A297549A1F23267F0081ACE9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -472,10 +472,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A249260C1F30713C0050FA51 /* launch.png in Resources */,
 				A29754A91F23267F0081ACE9 /* LaunchScreen.storyboard in Resources */,
 				A29755091F2368AE0081ACE9 /* MJRefresh.bundle in Resources */,
 				A29755101F2626B20081ACE9 /* Assets.xcassets in Resources */,
-				A28B2DA01F29E82A00FBEE07 /* launch.png in Resources */,
 				A29755181F2D70A10081ACE9 /* README.txt in Resources */,
 				A29754A41F23267F0081ACE9 /* Main.storyboard in Resources */,
 			);
@@ -690,8 +690,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "104c0447-7277-447a-970c-c45a73441447";
-				PROVISIONING_PROFILE_SPECIFIER = "eva-dev";
+				PROVISIONING_PROFILE = "ad3cfd12-0d21-4811-b8ec-04a98e281362";
+				PROVISIONING_PROFILE_SPECIFIER = "evabot-dev";
 			};
 			name = Debug;
 		};
@@ -714,8 +714,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "11e19d0a-06e2-4e8e-99f6-feb132adb695";
-				PROVISIONING_PROFILE_SPECIFIER = "eva-dis";
+				PROVISIONING_PROFILE = "3e9309cd-3e12-4e38-ab54-088960f9d3ca";
+				PROVISIONING_PROFILE_SPECIFIER = "evabot-dis";
 			};
 			name = Release;
 		};
