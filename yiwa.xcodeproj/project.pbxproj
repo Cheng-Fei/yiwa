@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A249260C1F30713C0050FA51 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A249260B1F30713C0050FA51 /* launch.png */; };
+		A249260F1F317A2E0050FA51 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A249260E1F317A2E0050FA51 /* MBProgressHUD.m */; };
 		A297549B1F23267F0081ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549A1F23267F0081ACE9 /* main.m */; };
 		A297549E1F23267F0081ACE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549D1F23267F0081ACE9 /* AppDelegate.m */; };
 		A29754A11F23267F0081ACE9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29754A01F23267F0081ACE9 /* ViewController.m */; };
@@ -67,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		A249260B1F30713C0050FA51 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		A249260D1F317A2E0050FA51 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A249260E1F317A2E0050FA51 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A29754961F23267F0081ACE9 /* yiwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yiwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A297549A1F23267F0081ACE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A297549C1F23267F0081ACE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 		A29754981F23267F0081ACE9 /* yiwa */ = {
 			isa = PBXGroup;
 			children = (
+				A249260D1F317A2E0050FA51 /* MBProgressHUD.h */,
+				A249260E1F317A2E0050FA51 /* MBProgressHUD.m */,
 				A29755111F2D70A10081ACE9 /* OpenSDK1.7.9 */,
 				A29754CC1F2368AE0081ACE9 /* MJRefresh */,
 				A297549C1F23267F0081ACE9 /* AppDelegate.h */,
@@ -509,6 +514,7 @@
 				A297550C1F2368AE0081ACE9 /* UIScrollView+MJExtension.m in Sources */,
 				A29755061F2368AE0081ACE9 /* MJRefreshGifHeader.m in Sources */,
 				A297549E1F23267F0081ACE9 /* AppDelegate.m in Sources */,
+				A249260F1F317A2E0050FA51 /* MBProgressHUD.m in Sources */,
 				A29754FD1F2368AE0081ACE9 /* MJRefreshComponent.m in Sources */,
 				A29754FF1F2368AE0081ACE9 /* MJRefreshHeader.m in Sources */,
 				A297550E1F2368AE0081ACE9 /* UIView+MJExtension.m in Sources */,

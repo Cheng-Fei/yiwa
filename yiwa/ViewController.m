@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MJRefresh.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "MBProgressHUD.h"
 
 static NSString * const isNeedNav = @"isNeedNav";
 
@@ -23,7 +24,8 @@ static NSString * const isNeedNav = @"isNeedNav";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.webView.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+    self.webView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
     self.webView.delegate = self;
     self.webView.scrollView.showsVerticalScrollIndicator = NO;
     self.webView.scrollView.showsHorizontalScrollIndicator = NO;
@@ -45,6 +47,10 @@ static NSString * const isNeedNav = @"isNeedNav";
 - (void)loadRequest{
     
     NSURLRequest *request;
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.label.text = @"加载中...";
+//    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
+//    hud.backgroundView.color = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.5];
     
     if (![[NSUserDefaults standardUserDefaults] boolForKey:isNeedNav]) {
         
@@ -70,7 +76,7 @@ static NSString * const isNeedNav = @"isNeedNav";
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.webView.scrollView.mj_header endRefreshing];
-    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 //    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
 //    
 //    context[@"onPay"] = ^(){
