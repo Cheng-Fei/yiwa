@@ -10,5 +10,7 @@
 #import "WXApi.h"
 
 @interface WXApiManager : NSObject<WXApiDelegate>
+@property (nonatomic, copy) void (^resultBlock)(BOOL isSuccess);
 +(instancetype)sharedManager;
+
 @end

@@ -10,6 +10,9 @@
 #import "MJRefresh.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "MBProgressHUD.h"
+#import "JSBrigade.h"
+#import "WXApi.h"
+#import "WXApiManager.h"
 
 static NSString * const isNeedNav = @"isNeedNav";
 
@@ -77,46 +80,69 @@ static NSString * const isNeedNav = @"isNeedNav";
 {
     [self.webView.scrollView.mj_header endRefreshing];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-//    JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-//    
-//    context[@"onPay"] = ^(){
-//        
-//        NSArray *array = [JSContext currentArguments];
-//        
-//    };
     
+    [WXApiManager sharedManager].resultBlock = ^(BOOL isSuccess) {
+        
+        if (isSuccess) {
+            [self.webView stringByEvaluatingJavaScriptFromString:@"window.location.href = 'eva/index.jsp?dir_flag=wx_pay&dir_url=eva/context/my_orders_index.jsp?payment_status=8'"];
+            ;
+        } else {
+            [self.webView stringByEvaluatingJavaScriptFromString:@"window.location.href = 'eva/index.jsp?dir_flag=wx_pay&dir_url=eva/context/my_orders_index.jsp?payment_status=0'"];
+        }
+    };
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
+    
     // NOTE: ------  对alipays:相关的scheme处理 -------
     // NOTE: 若遇到支付宝相关scheme，则跳转到本地支付宝App
     NSString* reqUrl = request.URL.absoluteString;
     if ([reqUrl hasPrefix:@"alipays://"] || [reqUrl hasPrefix:@"alipay://"]) {
         // NOTE: 跳转支付宝App
-        BOOL bSucc = [[UIApplication sharedApplication]openURL:request.URL];
-        
-        // NOTE: 如果跳转失败，则跳转itune下载支付宝App
-//        if (!bSucc) {
-//            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
-//                                                           message:@"未检测到支付宝客户端，请安装后重试。"
-//                                                          delegate:self
-//                                                 cancelButtonTitle:@"立即安装"
-//                                                 otherButtonTitles:nil];
-//            [alert show];
-//        }
+        [[UIApplication sharedApplication]openURL:request.URL];
         return NO;
+    }else if ([reqUrl hasPrefix:@"openwexin://"]){
+        // 跳转微信
+        NSError *error;
+        NSString *jsonStr = [reqUrl substringFromIndex:@"openwexin://".length];
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"%7B" withString:@"{"];
+        jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"%7D" withString:@"}"];
+        NSMutableDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:&error];
+        
+        [self openWeChat:dict];
+        NSLog(@"---");
+        return NO;
+        
     }
     return YES;
 }
 
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    // NOTE: 跳转itune下载支付宝App
-//    NSString* urlStr = @"https://itunes.apple.com/cn/app/zhi-fu-bao-qian-bao-yu-e-bao/id333206289?mt=8";
-//    NSURL *downloadUrl = [NSURL URLWithString:urlStr];
-//    [[UIApplication sharedApplication]openURL:downloadUrl];
-//}
+- (void)openWeChat:(NSMutableDictionary *)dict{
+    
+    if(dict != nil){
+        NSMutableString *retcode = [dict objectForKey:@"retcode"];
+        if (retcode.intValue == 0){
+            NSMutableString *stamp  = [dict objectForKey:@"timestamp"];
+            
+            //调起微信支付
+            PayReq* req             = [[PayReq alloc] init];
+            req.partnerId           = [dict objectForKey:@"partnerid"];
+            req.prepayId            = [dict objectForKey:@"prepayid"];
+            req.nonceStr            = [dict objectForKey:@"noncestr"];
+            req.timeStamp           = stamp.intValue;
+            req.package             = @"Sign=WXPay";
+            req.sign                = [dict objectForKey:@"sign"];
+            [WXApi sendReq:req];
+            //日志输出
+            NSLog(@"appid=%@\npartid=%@\nprepayid=%@\nnoncestr=%@\ntimestamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appid"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign );
+            
+        }
+    }
+    
+    
+}
 
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
@@ -147,44 +173,7 @@ static NSString * const isNeedNav = @"isNeedNav";
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-/*
- 
- 
-	$(".fakeloader").fakeLoader({
- timeToHide:3000,
- spinner:"spinner1",
-	});
-	
-//	跳转支付
-	
-function onPay(pay_type){
-    
-    var bussines_id = $('#bussines_id').val();
-    var pay_mode = $('#pay_mode').val();
-    var share_user_id = $('#share_user_id').val();
-    var car_type = $('#car_type').val();
-    var fs_money = $('#fs_money').val();
-    var all_money = $('#all_money').val();
-    var all_point = $('#all_point').val();
-    var fs_point = $('#fs_point').val();
-    
-    if(bussines_id!=''){
-        var xjkj_object = new xjkj();
-        xjkj_object.formSubmit('','payTypeCheck','','','',{},function(result){
-            var msg = $.parseJSON(result)['msg'];
-            var code = $.parseJSON(result)['code'];
-            if(code=='0'){
-                window.location.replace('eva/pay/pay_next.jsp?fs_point='+fs_point+'&all_point='+all_point+'&all_money='+all_money+'&car_type='+car_type+'&fs_money='+fs_money+'&share_user_id='+share_user_id+'&pay_type='+pay_type+'&bussines_id='+bussines_id+'&pay_mode='+pay_mode+'&pay_id='+$('#pay_id').val());
-            }else{
-                xjkj_object.dialog('操作提示','alert',msg,'info','3000');
-            }
-        });
-    }
-}
 
-
- 
- */
 
 
 
@@ -195,3 +184,4 @@ function onPay(pay_type){
 
 
 @end
+

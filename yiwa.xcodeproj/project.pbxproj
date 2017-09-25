@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2315D0C1F74182900CD755B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2315D0B1F74182800CD755B /* JavaScriptCore.framework */; };
+		A2315D0F1F75F6C600CD755B /* JSBrigade.m in Sources */ = {isa = PBXBuildFile; fileRef = A2315D0E1F75F6C600CD755B /* JSBrigade.m */; };
 		A249260C1F30713C0050FA51 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = A249260B1F30713C0050FA51 /* launch.png */; };
 		A249260F1F317A2E0050FA51 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A249260E1F317A2E0050FA51 /* MBProgressHUD.m */; };
 		A297549B1F23267F0081ACE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A297549A1F23267F0081ACE9 /* main.m */; };
@@ -67,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2315D0B1F74182800CD755B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A2315D0D1F75F6C600CD755B /* JSBrigade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBrigade.h; sourceTree = "<group>"; };
+		A2315D0E1F75F6C600CD755B /* JSBrigade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBrigade.m; sourceTree = "<group>"; };
 		A249260B1F30713C0050FA51 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		A249260D1F317A2E0050FA51 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A249260E1F317A2E0050FA51 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2315D0C1F74182900CD755B /* JavaScriptCore.framework in Frameworks */,
 				A297552C1F2D783D0081ACE9 /* CFNetwork.framework in Frameworks */,
 				A297552B1F2D78330081ACE9 /* Security.framework in Frameworks */,
 				A29755261F2D779C0081ACE9 /* libc++.tbd in Frameworks */,
@@ -208,6 +214,8 @@
 				A297549D1F23267F0081ACE9 /* AppDelegate.m */,
 				A297549F1F23267F0081ACE9 /* ViewController.h */,
 				A29754A01F23267F0081ACE9 /* ViewController.m */,
+				A2315D0D1F75F6C600CD755B /* JSBrigade.h */,
+				A2315D0E1F75F6C600CD755B /* JSBrigade.m */,
 				A29755191F2D75E90081ACE9 /* WXApiManager.h */,
 				A297551A1F2D75E90081ACE9 /* WXApiManager.m */,
 				A29754A21F23267F0081ACE9 /* Main.storyboard */,
@@ -356,6 +364,7 @@
 		A297551C1F2D77510081ACE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2315D0B1F74182800CD755B /* JavaScriptCore.framework */,
 				A297552D1F2D78480081ACE9 /* libc++abi.tbd */,
 				A29755291F2D77BA0081ACE9 /* CFNetwork.framework */,
 				A29755271F2D77AD0081ACE9 /* Security.framework */,
@@ -436,7 +445,7 @@
 					A29754951F23267F0081ACE9 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6ZE5FH32SY;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					A29754AE1F23267F0081ACE9 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -519,6 +528,7 @@
 				A29754FF1F2368AE0081ACE9 /* MJRefreshHeader.m in Sources */,
 				A297550E1F2368AE0081ACE9 /* UIView+MJExtension.m in Sources */,
 				A297551B1F2D75E90081ACE9 /* WXApiManager.m in Sources */,
+				A2315D0F1F75F6C600CD755B /* JSBrigade.m in Sources */,
 				A29755051F2368AE0081ACE9 /* MJRefreshBackStateFooter.m in Sources */,
 				A29754FB1F2368AE0081ACE9 /* MJRefreshAutoFooter.m in Sources */,
 				A297550D1F2368AE0081ACE9 /* UIScrollView+MJRefresh.m in Sources */,
@@ -682,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZE5FH32SY;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -696,8 +707,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ad3cfd12-0d21-4811-b8ec-04a98e281362";
-				PROVISIONING_PROFILE_SPECIFIER = "evabot-dev";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -705,7 +716,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZE5FH32SY;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -720,8 +732,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3e9309cd-3e12-4e38-ab54-088960f9d3ca";
-				PROVISIONING_PROFILE_SPECIFIER = "evabot-dis";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
