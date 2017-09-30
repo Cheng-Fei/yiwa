@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A29754951F23267F0081ACE9"
-               BuildableName = "yiwa.app"
-               BlueprintName = "yiwa"
-               ReferencedContainer = "container:yiwa.xcodeproj">
+               BuildableName = "evabot.app"
+               BlueprintName = "evabot"
+               ReferencedContainer = "container:evabot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -33,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A29754AE1F23267F0081ACE9"
-               BuildableName = "yiwaTests.xctest"
-               BlueprintName = "yiwaTests"
-               ReferencedContainer = "container:yiwa.xcodeproj">
+               BuildableName = "evabotTests.xctest"
+               BlueprintName = "evabotTests"
+               ReferencedContainer = "container:evabot.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A29754B91F23267F0081ACE9"
-               BuildableName = "yiwaUITests.xctest"
-               BlueprintName = "yiwaUITests"
-               ReferencedContainer = "container:yiwa.xcodeproj">
+               BuildableName = "evabotUITests.xctest"
+               BlueprintName = "evabotUITests"
+               ReferencedContainer = "container:evabot.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A29754951F23267F0081ACE9"
-            BuildableName = "yiwa.app"
-            BlueprintName = "yiwa"
-            ReferencedContainer = "container:yiwa.xcodeproj">
+            BuildableName = "evabot.app"
+            BlueprintName = "evabot"
+            ReferencedContainer = "container:evabot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,6 +66,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -76,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A29754951F23267F0081ACE9"
-            BuildableName = "yiwa.app"
-            BlueprintName = "yiwa"
-            ReferencedContainer = "container:yiwa.xcodeproj">
+            BuildableName = "evabot.app"
+            BlueprintName = "evabot"
+            ReferencedContainer = "container:evabot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +97,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A29754951F23267F0081ACE9"
-            BuildableName = "yiwa.app"
-            BlueprintName = "yiwa"
-            ReferencedContainer = "container:yiwa.xcodeproj">
+            BuildableName = "evabot.app"
+            BlueprintName = "evabot"
+            ReferencedContainer = "container:evabot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

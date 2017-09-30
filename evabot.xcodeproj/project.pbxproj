@@ -75,7 +75,7 @@
 		A249260B1F30713C0050FA51 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		A249260D1F317A2E0050FA51 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A249260E1F317A2E0050FA51 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		A29754961F23267F0081ACE9 /* yiwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yiwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29754961F23267F0081ACE9 /* evabot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = evabot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A297549A1F23267F0081ACE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A297549C1F23267F0081ACE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A297549D1F23267F0081ACE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 		A29754A31F23267F0081ACE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A29754A81F23267F0081ACE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A29754AA1F23267F0081ACE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A29754AF1F23267F0081ACE9 /* yiwaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yiwaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29754AF1F23267F0081ACE9 /* evabotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evabotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29754B31F23267F0081ACE9 /* yiwaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yiwaTests.m; sourceTree = "<group>"; };
 		A29754B51F23267F0081ACE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A29754BA1F23267F0081ACE9 /* yiwaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yiwaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A29754BA1F23267F0081ACE9 /* evabotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = evabotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29754BE1F23267F0081ACE9 /* yiwaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yiwaUITests.m; sourceTree = "<group>"; };
 		A29754C01F23267F0081ACE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A29754CE1F2368AE0081ACE9 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
@@ -196,9 +196,9 @@
 		A29754971F23267F0081ACE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A29754961F23267F0081ACE9 /* yiwa.app */,
-				A29754AF1F23267F0081ACE9 /* yiwaTests.xctest */,
-				A29754BA1F23267F0081ACE9 /* yiwaUITests.xctest */,
+				A29754961F23267F0081ACE9 /* evabot.app */,
+				A29754AF1F23267F0081ACE9 /* evabotTests.xctest */,
+				A29754BA1F23267F0081ACE9 /* evabotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -380,9 +380,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A29754951F23267F0081ACE9 /* yiwa */ = {
+		A29754951F23267F0081ACE9 /* evabot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A29754C31F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwa" */;
+			buildConfigurationList = A29754C31F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabot" */;
 			buildPhases = (
 				A29754921F23267F0081ACE9 /* Sources */,
 				A29754931F23267F0081ACE9 /* Frameworks */,
@@ -392,14 +392,14 @@
 			);
 			dependencies = (
 			);
-			name = yiwa;
+			name = evabot;
 			productName = yiwa;
-			productReference = A29754961F23267F0081ACE9 /* yiwa.app */;
+			productReference = A29754961F23267F0081ACE9 /* evabot.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A29754AE1F23267F0081ACE9 /* yiwaTests */ = {
+		A29754AE1F23267F0081ACE9 /* evabotTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A29754C61F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwaTests" */;
+			buildConfigurationList = A29754C61F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabotTests" */;
 			buildPhases = (
 				A29754AB1F23267F0081ACE9 /* Sources */,
 				A29754AC1F23267F0081ACE9 /* Frameworks */,
@@ -410,14 +410,14 @@
 			dependencies = (
 				A29754B11F23267F0081ACE9 /* PBXTargetDependency */,
 			);
-			name = yiwaTests;
+			name = evabotTests;
 			productName = yiwaTests;
-			productReference = A29754AF1F23267F0081ACE9 /* yiwaTests.xctest */;
+			productReference = A29754AF1F23267F0081ACE9 /* evabotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A29754B91F23267F0081ACE9 /* yiwaUITests */ = {
+		A29754B91F23267F0081ACE9 /* evabotUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A29754C91F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwaUITests" */;
+			buildConfigurationList = A29754C91F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabotUITests" */;
 			buildPhases = (
 				A29754B61F23267F0081ACE9 /* Sources */,
 				A29754B71F23267F0081ACE9 /* Frameworks */,
@@ -428,9 +428,9 @@
 			dependencies = (
 				A29754BC1F23267F0081ACE9 /* PBXTargetDependency */,
 			);
-			name = yiwaUITests;
+			name = evabotUITests;
 			productName = yiwaUITests;
-			productReference = A29754BA1F23267F0081ACE9 /* yiwaUITests.xctest */;
+			productReference = A29754BA1F23267F0081ACE9 /* evabotUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -461,7 +461,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A29754911F23267F0081ACE9 /* Build configuration list for PBXProject "yiwa" */;
+			buildConfigurationList = A29754911F23267F0081ACE9 /* Build configuration list for PBXProject "evabot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -474,9 +474,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A29754951F23267F0081ACE9 /* yiwa */,
-				A29754AE1F23267F0081ACE9 /* yiwaTests */,
-				A29754B91F23267F0081ACE9 /* yiwaUITests */,
+				A29754951F23267F0081ACE9 /* evabot */,
+				A29754AE1F23267F0081ACE9 /* evabotTests */,
+				A29754B91F23267F0081ACE9 /* evabotUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -565,12 +565,12 @@
 /* Begin PBXTargetDependency section */
 		A29754B11F23267F0081ACE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A29754951F23267F0081ACE9 /* yiwa */;
+			target = A29754951F23267F0081ACE9 /* evabot */;
 			targetProxy = A29754B01F23267F0081ACE9 /* PBXContainerItemProxy */;
 		};
 		A29754BC1F23267F0081ACE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A29754951F23267F0081ACE9 /* yiwa */;
+			target = A29754951F23267F0081ACE9 /* evabot */;
 			targetProxy = A29754BB1F23267F0081ACE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -746,7 +746,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CF.yiwaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yiwa.app/yiwa";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evabot.app/evabot";
 			};
 			name = Debug;
 		};
@@ -759,7 +759,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CF.yiwaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/yiwa.app/yiwa";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/evabot.app/evabot";
 			};
 			name = Release;
 		};
@@ -790,7 +790,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A29754911F23267F0081ACE9 /* Build configuration list for PBXProject "yiwa" */ = {
+		A29754911F23267F0081ACE9 /* Build configuration list for PBXProject "evabot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A29754C11F23267F0081ACE9 /* Debug */,
@@ -799,7 +799,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A29754C31F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwa" */ = {
+		A29754C31F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A29754C41F23267F0081ACE9 /* Debug */,
@@ -808,7 +808,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A29754C61F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwaTests" */ = {
+		A29754C61F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabotTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A29754C71F23267F0081ACE9 /* Debug */,
@@ -817,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A29754C91F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "yiwaUITests" */ = {
+		A29754C91F23267F0081ACE9 /* Build configuration list for PBXNativeTarget "evabotUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A29754CA1F23267F0081ACE9 /* Debug */,
