@@ -58,11 +58,11 @@ static NSString * const isNeedNav = @"isNeedNav";
     if (![[NSUserDefaults standardUserDefaults] boolForKey:isNeedNav]) {
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:isNeedNav];
-        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc"]];
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc:8280"]];
         
     } else {
         
-        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc/eva/index.jsp"]];
+        request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://edu.evabot.cc:8280/eva/index.jsp"]];
         
     }
     

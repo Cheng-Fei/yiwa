@@ -444,7 +444,7 @@
 				TargetAttributes = {
 					A29754951F23267F0081ACE9 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 6ZE5FH32SY;
+						DevelopmentTeam = 5C83KHGVSN;
 						ProvisioningStyle = Automatic;
 					};
 					A29754AE1F23267F0081ACE9 = {
@@ -693,7 +693,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6ZE5FH32SY;
+				DEVELOPMENT_TEAM = 5C83KHGVSN;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,7 +705,7 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bokesoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -718,7 +718,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6ZE5FH32SY;
+				DEVELOPMENT_TEAM = 5C83KHGVSN;
 				INFOPLIST_FILE = yiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -730,7 +730,7 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.evabot.eva;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bokesoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
